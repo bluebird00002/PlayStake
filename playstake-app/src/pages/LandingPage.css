@@ -1,7 +1,7 @@
 .landing-page-body {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(180deg, #000000 10%, #271901f1 90%);
+  min-height: 100vh;
+  background-color: black;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -11,13 +11,23 @@
 
 .blocks {
   width: 100%;
-  height: 100vh;
+  height: fit-content;
 }
 
 .nav-bar {
   height: 100px;
   display: flex;
   flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-bar.black-nav {
+  background-color: #000000e0;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px #000000b0;
+  border-bottom: 1px solid #ffffff1a;
 }
 
 .bar {
@@ -28,10 +38,10 @@
 }
 
 .playstake-logo {
-  height: 70px;
+  height: 80px;
   margin-top: 10px;
   margin-left: 20px;
-  width: 70px;
+  width: 80px;
   cursor: pointer;
 }
 
@@ -42,7 +52,9 @@
 
 .nav-items {
   color: #ffffff;
-  font-family: "inter";
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
   margin-left: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -94,7 +106,9 @@
   border: none;
   padding: 0 8px;
   font-size: 18px;
-  font-family: "inter";
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
   outline: none;
   background: inherit;
   color: #ffffffd5;
@@ -106,7 +120,9 @@
 
 .sign {
   color: #ffffffd5;
-  font-family: "inter";
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
   margin-left: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -124,4 +140,399 @@
 
 .up:hover {
   border-color: #ffffffa2;
+}
+
+.block-2 {
+  position: sticky;
+  top: 0;
+  transition: transform 0.36s linear;
+}
+
+.b2-1 {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 85px 0 28px 0;
+  z-index: 1;
+}
+
+.b2-1-text {
+  width: fit-content;
+  color: white;
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
+  font-size: 1rem;
+  border: 1px solid #ab5f02e7;
+  background-color: #3a20018e;
+  padding: 10px;
+  border-radius: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.div-text {
+  padding: 5px;
+}
+
+.kick-off-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.kick-off-icon img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.b2-2 {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.b2-2-text {
+  color: #ffffffd5;
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
+  font-size: 3.6rem;
+
+  font-weight: bolder;
+  width: 50%;
+  text-align: center;
+  z-index: 1;
+}
+
+.b2-3 {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.b2-3-text {
+  color: #ffffffc5;
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+
+  font-size: 1.3rem;
+  width: 40%;
+  text-align: center;
+  line-height: 28px;
+  z-index: 1;
+}
+
+.b2-4 {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.b2-4-sign-up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ab5f02e7;
+  padding: 10px 15px 10px 0;
+  border-radius: 6px;
+  background-color: #3a20018e;
+  width: fit-content;
+  z-index: 1;
+}
+.sign-up-inp {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background: none;
+}
+
+.sign-up-inp input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+  border-radius: 6px;
+  outline: none;
+  background: none;
+  color: #ffffffd5;
+  font-size: 16px;
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  transition: border-color 0.3s ease;
+  margin-left: 0;
+}
+
+.sign-up-inp input::placeholder {
+  color: #ffffffb7;
+  font-size: medium;
+}
+
+.sign-up-inp input:focus {
+  border-color: #c2800471;
+}
+
+.sign-up-btn {
+  height: 40px;
+  padding: 3px 10px;
+  background-color: #7a5003b8;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  color: #ffffffbe;
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.sign-up-btn:hover {
+  background-color: #7a5003df;
+  border-color: #c2800424;
+  color: #ffffff;
+}
+
+.b2-5 {
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.b2-5-items {
+  height: fit-content;
+
+  flex: 1;
+  height: 100%;
+}
+
+.game-pad-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-pad-1 img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.game-pad-2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.game-pad-2 img {
+  width: 54%;
+  height: auto;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.e-coins {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.e-coins img {
+  width: 45%;
+  height: auto;
+  transform-origin: center;
+  z-index: 1;
+}
+
+.shinny-bubble {
+  position: absolute;
+  width: 85vw;
+  height: 60vh;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ed7a0769,
+    #ed7a07f4,
+    #ed7a07f4,
+    #ed7a075f,
+    #ed7a07f4,
+    #ed7a07,
+    #ed7a076e
+  );
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.block-3 {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.screens {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.b3-video-screen {
+  width: 70vw;
+  height: 550px;
+  border: 20px solid #8787872d;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0000006c;
+  background: linear-gradient(#00000020, #0000000f);
+  backdrop-filter: blur(100px);
+  flex-grow: 1;
+}
+
+.screen-btns {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 1px;
+  margin-top: 30px;
+  border: 3px solid #ffffff6b;
+  padding: 10px 8px;
+  border-radius: 100px;
+  z-index: 1;
+}
+.s-btns {
+  width: 180px;
+  height: fit-content;
+  padding: 8px 13px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  color: #ffffffc5;
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  font-size: 1rem;
+  transition: all 0.36s ease;
+}
+.s-btns:hover {
+  background-color: #45434360;
+}
+.s-btns:active {
+  background-color: #7a78785c;
+}
+.s-btns.active {
+  border-color: #7a77779d;
+  background-color: #45434360;
+}
+
+.btn-par-cont {
+  width: 100%;
+  border-top: 1px solid #ffffff4e;
+  height: fit-content;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  background: linear-gradient(#6f6d6d48, #000000 12%);
+  backdrop-filter: blur(10px);
+}
+
+.about-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+}
+
+.about-text {
+  color: #ffffff91;
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  font-size: 1.5rem;
+  line-height: 40px;
+  text-wrap: balance;
+  text-align: left;
+  font-weight: bold;
+}
+
+.about-text span {
+  color: #ffffffd5;
+}
+
+.box {
+  width: 50%;
+  flex-grow: 1;
+  border-right: 1px solid #ffffff2e;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.about-text h2 {
+  margin-bottom: 6px;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.hold-container-text {
+  border: 1px solid #ffffff4f;
+  width: 80%;
+  height: fit-content;
+  padding: 20px;
+  background-color: #20202083;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ffffff3b;
+}
+
+.more-btn {
+  width: fit-content;
+  margin-top: 20px;
+  padding: 5px 25px;
+  border: 2px solid #ffffff5c;
+  border-radius: 45px;
+  background-color: transparent;
+  color: #ffffffc5;
+  font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+  background-color: #45434360;
+}
+.more-btn:active {
+  background-color: #7a78785c;
 }

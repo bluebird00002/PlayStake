@@ -1,5 +1,17 @@
+@import "@fontsource-variable/mona-sans";
 body {
   margin: 0;
   width: 100vw;
-  overflow: hidden;
+  height: fit-content;
+  overflow-x: hidden;
+}
+
+/* Ensure the page background matches the app */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
