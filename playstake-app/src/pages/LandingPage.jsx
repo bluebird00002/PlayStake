@@ -296,31 +296,101 @@ function LandingPage() {
             <div className="box about-text">
               <motion.div
                 ref={ref1}
-                initial={{ opacity: 0, y: 70 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 70 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 70, boxShadow: "0 0 0px #ef801184" }}
+                animate={
+                  inView
+                    ? {
+                        opacity: 1,
+                        y: 0,
+                        boxShadow: "0 0 20px #ef801184",
+                      }
+                    : {
+                        opacity: 0,
+                        y: 70,
+                        boxShadow: "0 0 0px #ef801184",
+                      }
+                }
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                  boxShadow: { duration: 0.5, delay: 1 },
+                }}
                 className="hold-container-text"
               >
                 <h2>
                   {" "}
-                  <Gamepad size={50}></Gamepad> About PlayStake
+                  <Gamepad size={50}></Gamepad> About <span>PlayStake</span>
                 </h2>
                 <p>
                   PlayStake is a web-based{" "}
                   <span>competitive gaming platform</span> that transforms
                   casual play into structured, fair, and rewarding competition.
-                  Players compete in skill-based matches, track performance, and{" "}
-                  <span>earn through a secure in-platform economy</span>.
+                  Players compete in skill-based matches, track performance, and
+                  <span> earn through a secure in-platform economy</span>.
                   Spectators actively engage through live updates, gifting, and
                   community interaction. PlayStake bridges gaming, competition,
                   and digital opportunity accessible anytime, directly from the
                   browser.
                 </p>
-                <div className="more-btn">Learn More</div>
+                <div className="more-btn">
+                  Learn More{" "}
+                  <ChevronRight
+                    size={20}
+                    style={{ transform: "translateY(1px)" }}
+                  ></ChevronRight>
+                </div>
               </motion.div>
             </div>
 
-            <div className="box"> </div>
+            <motion.div className="box">
+              <motion.div
+                className="flow-image"
+                ref={ref1}
+                initial={{ opacity: 0, transform: "none", rotateX: 0 }}
+                animate={
+                  inView
+                    ? {
+                        opacity: 1,
+                        transform: "translate(0%, 15%)",
+                        background: "rgba(0, 0, 0, 1)",
+                        boxShadow: "-2px 0 0 0 10px #ef750b60",
+                      }
+                    : { opacity: 0, transform: "translate(20%, 28%)" }
+                }
+                transition={{
+                  duration: 1,
+                  ease: "easeOut",
+                  delay: 0,
+                  boxShadow: { duration: 0.5, delay: 0.3 },
+                }}
+              >
+                <img src="public/images/PS Flow.png" alt="" />
+                <motion.div
+                  ref={ref1}
+                  initial={{ opacity: 0, transform: "none", rotateX: 0 }}
+                  animate={
+                    inView
+                      ? { opacity: 0.4, transform: "translate(-10%, -20%)" }
+                      : { opacity: 0, transform: "translate(0%, 0%)" }
+                  }
+                  transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                  className="shinny-bubble bub-3 "
+                ></motion.div>
+              </motion.div>
+            </motion.div>
+            <motion.div
+              ref={ref1}
+              initial={{ opacity: 0, transform: "none", rotateX: 0 }}
+              animate={
+                inView
+                  ? { opacity: 0.7, transform: "translate(10%, 8%)" }
+                  : { opacity: 0, transform: "translate(0%, 0%)" }
+              }
+              transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
+              className="shinny-bubble bub-2"
+            >
+              {" "}
+            </motion.div>
           </div>
         </div>
       </motion.div>

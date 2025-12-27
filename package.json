@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fontsource-variable/mona-sans": "^5.2.8",
     "lucide-react": "^0.561.0"
   }
 }
