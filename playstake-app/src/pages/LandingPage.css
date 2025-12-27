@@ -473,7 +473,7 @@
   color: #ffffff91;
   font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 40px;
   text-wrap: balance;
   text-align: left;
@@ -487,7 +487,7 @@
 .box {
   width: 50%;
   flex-grow: 1;
-  border-right: 1px solid #ffffff2e;
+  border-right: 1px solid transparent;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -496,9 +496,23 @@
   margin-top: 30px;
 }
 
+.flow-image {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  border: 1px solid #ffffff42;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.flow-image:nth-of-type(2) img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
 .about-text h2 {
   margin-bottom: 6px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -506,26 +520,31 @@
 }
 
 .hold-container-text {
-  border: 1px solid #ffffff4f;
+  border: 1px solid #ffffff40;
   width: 80%;
   height: fit-content;
   padding: 20px;
-  background-color: #20202083;
+  background-color: #000000c2;
   border-radius: 10px;
-  box-shadow: 0 0 20px #ffffff3b;
+
+  backdrop-filter: blur(100px);
 }
 
 .more-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
   width: fit-content;
   margin-top: 20px;
-  padding: 5px 25px;
-  border: 2px solid #ffffff5c;
+  padding: 5px 15px 5px 25px;
+  border: 1px solid #ffffff1d;
   border-radius: 45px;
   background-color: transparent;
-  color: #ffffffc5;
+  color: #0acdebd1;
   font-family: "Mona Sans", system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -535,4 +554,20 @@
 }
 .more-btn:active {
   background-color: #7a78785c;
+}
+
+.bub-2 {
+  width: 45vw;
+  height: 80vh;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.bub-3 {
+  width: 50vw;
+  height: 70vh;
+  top: 20%;
+  right: 0;
+  z-index: -1;
+  opacity: 0.4;
 }
